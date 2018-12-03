@@ -20,5 +20,5 @@
             <button type="submit" class="btn btn-primary" (click)="check()">Sign in</button>
         </div>
     </div>
-    <span class="badge badge-danger" *ngIf="error">ERROR</span>
+    <span class="badge badge-danger" *ngIf="error">{{errorMessage}}</span>
 </form>

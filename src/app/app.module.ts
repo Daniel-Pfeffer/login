@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
+import {LoginService} from './login.service';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,7 @@ import {AboutComponent} from './about/about.component';
         FormsModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [LoginService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
