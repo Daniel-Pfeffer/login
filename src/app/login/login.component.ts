@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {LoginService} from '../login.service';
+import {MatSelectChange} from '@angular/material';
 
 @Component({
     selector: 'app-login',
@@ -17,6 +18,8 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService;
     error: boolean;
     errorMessage: string;
+    right = 'right';
+    baum: String;
 
     constructor(router: Router, route: ActivatedRoute, service: LoginService) {
         this.router = router;
@@ -40,5 +43,9 @@ export class LoginComponent implements OnInit {
             this.error = true;
             this.errorMessage = 'Sorry wrong Username/password';
         }
+    }
+
+    baumValidator(event: MatSelectChange) {
+        this.baum = event.value;
     }
 }

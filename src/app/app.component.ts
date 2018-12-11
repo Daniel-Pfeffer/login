@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
     selector: 'app-root',
@@ -8,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
     title = 'Sum Routerino';
-    router: Router;
+    private router: Router;
 
     about() {
         this.router.navigate(['about']);

@@ -1,0 +1,6 @@
+<p>Are you sure, you want to logout?</p>
+<button class="form-control" (click)="logout()">Yes</button>
+<button class="form-control" [routerLink]="['../home']">No</button>
+<div class="alert alert-danger" *ngIf="logOut">
+    You successfully logged out
+</div>

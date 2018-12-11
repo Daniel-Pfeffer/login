@@ -1,25 +1,9 @@
-<h1>
-  Welcome to {{title}}
-</h1>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">{{title}}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['home']">Home<span
-                class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['about']">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['login']">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<mat-toolbar color="primary">
+        <button mat-button [routerLink]="['#']">{{title}}</button>
+        <button mat-button [routerLink]="['home']">Home</button>
+        <button mat-button [routerLink]="['about']">About</button>
+        <button mat-button [routerLink]="['login']">Login</button>
+        <button mat-button [routerLink]="['logout']">Logout</button>
+        <button mat-icon-button><mat-icon>favorite</mat-icon></button>
+    </mat-toolbar>
 <router-outlet></router-outlet>
